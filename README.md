@@ -15,15 +15,19 @@ FireFox
 ### Installing
 
 1) Open **Extensions** settings: chrome://extensions/
+
 ![Extensions](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/Extensions.PNG)
 
 2) Enable **Developer Mode**
+
 ![DeveloperMode](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/DeveloperMode.PNG)
 
 3) Press **"Load Unpacked"**
+
 ![LoadUnpacked](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/LoadUnpacked.PNG)
 
 4) Done!
+
 ![Done](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/Done.PNG)
 
 ## Usage
@@ -31,6 +35,7 @@ FireFox
 1) Open **Bot Panel**
 
 2) Press **Login**
+
 ![Login](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/SID.PNG)
 
 ## Authors
