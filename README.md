@@ -48,7 +48,7 @@ FireFox
 
 *Result:*
 
-![Login](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/SID.PNG)
+![Login](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/NewSID.PNG)
 
 ## Authors
 
