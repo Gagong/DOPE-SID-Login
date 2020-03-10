@@ -2,7 +2,7 @@
 
 Extension to make your life more easier with DOPE ;)
 
-**![VirusTotal Scan](https://www.virustotal.com/gui/file/92a7e0c0ae44218aedeba10bd26296ee0f2e5d05c5b5cbec721bd81dd88baead/detection)**
+**[VirusTotal Scan](https://www.virustotal.com/gui/file/92a7e0c0ae44218aedeba10bd26296ee0f2e5d05c5b5cbec721bd81dd88baead/detection)**
 
 ## Getting Started
 
