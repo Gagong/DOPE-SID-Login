@@ -46,6 +46,8 @@ FireFox
 
 2) Press **Login**
 
+*Result:*
+
 ![Login](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/SID.PNG)
 
 ## Authors
