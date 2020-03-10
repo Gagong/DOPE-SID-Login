@@ -8,7 +8,9 @@ Extension to make your life more easier with DOPE ;)
 
 ## Getting Started
 
-Many of You have been asking for this functionality to be included in the bot control panel for a long time. The time has come and we have done it! Meet - the DOPE SID Helper!
+* Many of You have been asking for this functionality to be included in the bot control panel for a long time. 
+* The time has come and we have done it! 
+* Meet - the DOPE SID Helper!
 
 ### Prerequisites
 
