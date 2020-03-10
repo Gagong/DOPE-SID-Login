@@ -20,19 +20,23 @@ FireFox
 
 ### Installing
 
-1) Open **Extensions** settings: chrome://extensions/
+1) Download repository by clicking here: [Download!](https://github.com/Gagong/DOPE-SID-Login/archive/master.zip)
+
+2) Unpack archive
+
+3) Open **Extensions** settings: chrome://extensions/
 
 ![Extensions](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/Extensions.PNG)
 
-2) Enable **Developer Mode**
+4) Enable **Developer Mode**
 
 ![DeveloperMode](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/DeveloperMode.PNG)
 
-3) Press **"Load Unpacked"**
+5) Press **"Load Unpacked"** and select DOPE-SID-Login folder
 
 ![LoadUnpacked](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/LoadUnpacked.PNG)
 
-4) Done!
+6) Done!
 
 ![Done](https://github.com/Gagong/DOPE-SID-Login/raw/master/Docs/Done.PNG)
 
