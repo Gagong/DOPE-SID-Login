@@ -3,7 +3,7 @@ let node;
 window.addEventListener('load', function() {
     setInterval(function() {
         if (document.querySelector('.add_button') !== null) {
-            if (nick !== getNick()) {
+            if (nick !== getData()[0]) {
                 node.remove();
             }
         } else {
@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
                 }
             }
         }
-        nick = getNick();
+        nick = getData()[0];
     }, 250);
 }, false)
 
@@ -56,27 +56,16 @@ function addButton(){
 }
 
 function sendSid() {
-    window.open('https://' + getServer() + '.darkorbit.com/?dosid=' + getSid(), '_blank');
+    window.open('https://' + getData()[1] + '.darkorbit.com/?dosid=' + getSid(), '_blank');
 }
 
-function getServer() {
-    let nameserver = document.getElementsByClassName("title withSub");
-    let server;
-    for (let i = 0; i < nameserver.length; i++) {
-        let getserver = nameserver[i].innerText;
-        server = getserver.split('_')
+function getData() {
+    let data;
+    let dataEl = document.getElementsByClassName("title withSub");
+    for (let i = 0; i < dataEl.length; i++) {
+        data = dataEl[i].innerText.split('_')
     }
-    return server[1];
-}
-
-function getNick() {
-    let nameserver = document.getElementsByClassName("title withSub");
-    let server;
-    for (let i = 0; i < nameserver.length; i++) {
-        let getserver = nameserver[i].innerText;
-        server = getserver.split('_')
-    }
-    return server[0];
+    return data;
 }
 
 function getSid(){
@@ -87,7 +76,7 @@ function getSid(){
         const children = el.querySelectorAll(tagName)
         if (typeof children === "undefined") return;
         if (children.length == 0) return;
-        
+
         return Array.from(children)[1].innerText;
     }
     return findSessionId();
