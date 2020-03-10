@@ -54,6 +54,10 @@ FireFox
 
 * **IT | Fabio** - *Initial work* - [IT | Fabio#5334](https://github.com/fabio1999ita)
 
+## Contributors
+
+* **Gagong** - *Code updates & fixes* - [Gagong#3809](https://github.com/Gagong)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
