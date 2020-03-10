@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
             }
         } else {
             if (window.location.href.includes("#Panel")) {
-                if (getSid().length === 0) {
+                if (getSid() && getSid().length === 0) {
 
                 } else {
                     addButton();
@@ -86,7 +86,8 @@ function getSid(){
 
         const children = el.querySelectorAll(tagName)
         if (typeof children === "undefined") return;
-
+        if (children.length == 0) return;
+        
         return Array.from(children)[1].innerText;
     }
     return findSessionId();
