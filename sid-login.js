@@ -2,8 +2,9 @@ let nick;
 let node;
 window.addEventListener('load', function() {
     setInterval(function() {
+        let updateNick = getData()[0];
         if (document.querySelector('.add_button') !== null) {
-            if (nick !== getData()[0]) {
+            if (nick !== updateNick) {
                 node.remove();
             }
         } else {
@@ -15,7 +16,7 @@ window.addEventListener('load', function() {
                 }
             }
         }
-        nick = getData()[0];
+        nick = updateNick;
     }, 250);
 }, false)
 
