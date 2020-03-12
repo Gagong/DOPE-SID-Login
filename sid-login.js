@@ -2,7 +2,7 @@ let nick;
 let node;
 window.addEventListener('load', function() {
     setInterval(function() {
-        let updateNick = getData()[0];
+        let updateNick = getUser();
         if (document.querySelector('.add_button') !== null) {
             if (nick !== updateNick) {
                 node.remove();
@@ -57,16 +57,29 @@ function addButton(){
 }
 
 function sendSid() {
-    window.open('https://' + getData()[1] + '.darkorbit.com/?dosid=' + getSid(), '_blank');
+    window.open('https://' + getServer() + '.darkorbit.com/?dosid=' + getSid(), '_blank');
 }
 
-function getData() {
+function getServer() {
     let data;
     let dataEl = document.getElementsByClassName("title withSub");
     for (let i = 0; i < dataEl.length; i++) {
         data = dataEl[i].innerText.split('_')
     }
-    return data;
+    return data[data.length - 1];
+}
+
+function getUser() {
+    let data;
+    let userName = "";
+    let dataEl = document.getElementsByClassName("title withSub");
+    for (let i = 0; i < dataEl.length; i++) {
+        data = dataEl[i].innerText.split('_')
+    }
+    for (let v = 0; v < data.length - 1; v++) {
+        userName += data[v];
+    }
+    return userName;
 }
 
 function getSid(){
