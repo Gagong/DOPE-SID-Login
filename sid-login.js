@@ -202,7 +202,7 @@ function addCheckbox(){
     document.head.appendChild(styleSheet4);
 
     node44 = document.createElement("label");
-    let textnode44 = document.createTextNode("\xa0\xa0\xa0\xa0\xa0\xa0\xa0Block nav");
+    let textnode44 = document.createTextNode("\xa0\xa0\xa0\xa0\xa0\xa0\xa0Block");
     node44.appendChild(textnode44);
     document.querySelector('.rightNav  > .rightNavTitle').appendChild(node44).className = "checklabel";
 }
