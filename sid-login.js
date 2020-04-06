@@ -48,6 +48,30 @@ window.addEventListener('load', function() {
         addStartButton();
         addStopButton();
     }
+    document.addEventListener("keyup", function(event) {
+        if (event.keyCode === 83) {
+            if(document.querySelector('.rightNavInfo  > .Running ') !== null){
+                var accountlist = document.querySelectorAll('.botItem  > .fas.fa-robot.icon ');
+                for (var c = 0; c < accountlist.length; ++c) {
+                    switch(true) {
+                        case accountlist[c].className.includes("Running"):
+                            checkstate[c] = 1;
+                            break;
+                        case accountlist[c].className.includes("Stopped"):
+                            checkstate[c] = 0;
+                            break;
+                        case accountlist[c].className.includes("Paused"):
+                            checkstate[c] = 2;
+                            break;
+                        default:
+                            checkstate[c] = 0;
+                            break;
+                    }
+                    stopclick = true;
+                }
+            }
+        }
+    });
 }, false)
 
 attemtSidLogin();
@@ -113,13 +137,16 @@ function addStartButton(){
 
     node1.addEventListener("click", function() {
         var divs = document.querySelectorAll('.botItemControls > .fas.fa-play ');
+        var running = document.querySelectorAll('.botItem  > .fas.fa-robot.icon ');
         for (var i = 0; i < divs.length; ++i) {
             if(stopclick === true){
                 if(checkstate[i] === 1){
                     divs[i].click();
                 }
             }else{
-                 divs[i].click();
+                 if(!running[i].className.includes("Running")){
+                    divs[i].click();
+                }
             }
         }
         stopclick = false;
@@ -153,27 +180,10 @@ function addStopButton(){
     document.head.appendChild(styleSheet2);
 
     node2.addEventListener("click", function() {
-        var accountlist = document.querySelectorAll('.botItem  > .fas.fa-robot.icon ');
-        for (var c = 0; c < accountlist.length; ++c) {
-            switch(true) {
-                case accountlist[c].className.includes("Running"):
-                    checkstate[c] = 1;
-                    break;
-                case accountlist[c].className.includes("Stopped"):
-                    checkstate[c] = 0;
-                    break;
-                case accountlist[c].className.includes("Paused"):
-                    checkstate[c] = 2;
-                    break;
-                default:
-                    checkstate[c] = 0;
-                    break;
-            }
-            stopclick = true;
-        };
         var divs = document.querySelectorAll('.botItemControls > .fas.fa-stop ');
+        var stopped = document.querySelectorAll('.botItem  > .fas.fa-robot.icon ');
         for (var i = 0; i < divs.length; ++i) {
-            if(checkstate[i] !== 0){
+            if(!stopped[i].className.includes("Stopped")){
                 divs[i].click();
             }
         };
