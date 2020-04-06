@@ -308,7 +308,7 @@ function setStyleBlock(){
  .disable{color:#8b8b8b;}
  .disable{color:#8b8b8b;}
  .newAcc{color:var(--greyLightColor);display:flex;overflow:hidden;cursor:pointer;max-height:40px;}
- .newAcc{background-color:#1e1f2b;}
+ .newAcc:hover{background-color:#1e1f2b;}
  .newAcc:nth-child(1){font-size:16px;min-width:40px;text-align:center;line-height:100%;align-self:center;}
  .newAcc:nth-child(2){font-size:16px;padding:10px;padding-left:6px;}
  .addNewAcc{color:var(--greyLightColor);min-width:300px;}
@@ -345,7 +345,7 @@ function setStyleBlock(){
  .disable{color:#8b8b8b;}
  .disable{color:#8b8b8b;}
  .newAcc{color:var(--greyLightColor);display:flex;overflow:hidden;cursor:pointer;max-height:40px;}
- .newAcc{background-color:#1e1f2b;}
+ .newAcc:hover{background-color:#1e1f2b;}
  .newAcc:nth-child(1){font-size:16px;min-width:40px;text-align:center;line-height:100%;align-self:center;}
  .newAcc:nth-child(2){font-size:16px;padding:10px;padding-left:6px;}
  .addNewAcc{color:var(--greyLightColor);min-width:300px;}
