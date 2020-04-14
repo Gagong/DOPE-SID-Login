@@ -4,8 +4,6 @@ Extension to make your life more easier with DOPE ;)
 
 **[VirusTotal Scan](https://www.virustotal.com/gui/file/92a7e0c0ae44218aedeba10bd26296ee0f2e5d05c5b5cbec721bd81dd88baead/detection)**
 
-Tampermonkey installation by **[Greasy Fork](https://greasyfork.org/it/scripts/395707-dope-helper-dosid)**
-
 ## Getting Started
 
 Many of You have been asking for this functionality to be included in the bot control panel for a long time. 
@@ -15,8 +13,6 @@ Meet - the **DOPE SID Helper**!
 ### Prerequisites
 
 Google Chrome (Required)
-Opera / Opera GX
-FireFox
 
 ### Installing
 
@@ -57,6 +53,10 @@ FireFox
 ## Contributors
 
 * **Gagong** - *Code updates & fixes* - [Gagong#3809](https://github.com/Gagong)
+
+## Credit
+
+* **Popcorn** - *To implement new logic*
 
 ## License
 
