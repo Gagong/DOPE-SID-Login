@@ -1,4 +1,4 @@
-# DOPE SID Login Helper by IT | Fabio#5334
+# DOPE SID Login Helper by Fabio#6652
 
 Extension to make your life more easier with DOPE ;)
 
