@@ -258,15 +258,15 @@ function getSid() {
 
 //Credits: Popcorn
 function attemtSidLogin() {
-  var dosid = /[?&]dosid=([^&]+)/.exec(window.location.href);
+  let dosid = /[?&]dosid=([^&]+)/.exec(window.location.href);
   if (dosid == null) dosid = /[?&]sid=([^&]+)/.exec(window.location.href);  
-  if (dosid == null) return; // No sid is on the url, return.
+  if (dosid == null) return;
 
-  var server = /^http[s]?:[/][/]([^.]+)[.]darkorbit[.]com/.exec(window.location.href);
+  let server = /^http[s]?:[/][/]([^.]+)[.]darkorbit[.]com/.exec(window.location.href);
   if (server == null) return;
 
   chrome.runtime.sendMessage({sid:dosid[1],sv:server[1]}, function(callback) {
-	  window.location.href = "https://" + server[1] + ".darkorbit.com/indexInternal.es?action=internalStart";
+	window.location.href = "https://" + server[1] + ".darkorbit.com/indexInternal.es?action=internalStart";
   });
 }
 
