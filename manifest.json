@@ -18,7 +18,7 @@
   }],
   "permissions": [
     "tabs",
-	"cookies",
-	"https://*.darkorbit.com/"
+    "cookies",
+    "https://*.darkorbit.com/"
   ]
 }
