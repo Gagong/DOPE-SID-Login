@@ -1,5 +1,5 @@
-let nick, node, node1, node2, node4, node44;
-let styleSheet5, styleSheet6;
+let nick = null, node = null, node1 = null, node2 = null, node4 = null, node44 = null;
+let styleSheet5 = null, styleSheet6 = null;
 var isblock = 0, checkstate = [], stopclick = false;
 
 window.addEventListener('load', function() {
@@ -14,35 +14,38 @@ window.addEventListener('load', function() {
                 node.remove();
         } else {
             if (window.location.href.includes("#Panel")) {
-                if (getSid().length === 0)
-                    return;
-                else
-                    addLogButton();
+                if (getSid() !== undefined)
+                    if (getSid().length === 0)
+                        return;
+                    else
+                        addLogButton();
             }
         }
 
         nick = updateNick;
 
-        if (document.querySelector('.add_Checkbox') === null) 
-            addCheckbox();
+        if (!window.location.href.includes("Account"))
+            if (document.querySelector('.add_Checkbox') === null) 
+                addCheckbox();
 
-        if (node4.checked) {
-            if (isblock === 0) {
-                isblock = 1;
-                setStyleBlock();
-                if (styleSheet6 !== undefined)
-                    styleSheet6.remove();
+        if (!window.location.href.includes("Account"))
+            if (node4.checked) {
+                if (isblock === 0) {
+                    isblock = 1;
+                    setStyleBlock();
+                    if (styleSheet6 !== undefined)
+                        styleSheet6.remove();
+                }
+            } else {
+                if (isblock === 1) {
+                    isblock = 0;
+                    setStyleActive();
+                    styleSheet5.remove();
+                }
             }
-        } else {
-            if (isblock === 1) {
-                isblock = 0;
-                setStyleActive();
-                styleSheet5.remove();
-            }
-        }
     }, 250);
 
-    if (document.querySelector('.add_buttonStart') === null) {
+    if (document.querySelector('.add_buttonStart') === null && !window.location.href.includes("Account")) {
         addStartButton();
         addStopButton();
     }
@@ -68,8 +71,9 @@ window.addEventListener('load', function() {
                     }
                     stopclick = true;
                 }
+                window.alert("Status of all bots saved\nClick 'Start all' to restore");
             }
-        }
+        }   
     });
 }, false)
 
@@ -215,7 +219,9 @@ function addCheckbox(){
 }
 
 function sendSid() {
-    window.open('https://' + getServer() + '.darkorbit.com/?dosid=' + getSid(), '_blank');
+    chrome.runtime.sendMessage({sid:getSid(),sv:getServer()}, function(callback) {
+        //window.open("https://" + getServer() + ".darkorbit.com/indexInternal.es?action=internalStart", '_blank');
+    });
 }
 
 function getServer() {
@@ -236,8 +242,9 @@ function getUser() {
     for (let i = 0; i < dataEl.length; i++) 
         data = dataEl[i].innerText.split('_')
     
-    for (let v = 0; v < data.length - 1; v++) 
-        userName += data[v];
+    if (data !== undefined)
+        for (let v = 0; v < data.length - 1; v++) 
+            userName += data[v];
     
     return userName;
 }
@@ -258,15 +265,15 @@ function getSid() {
 
 //Credits: Popcorn
 function attemtSidLogin() {
-  let dosid = /[?&]dosid=([^&]+)/.exec(window.location.href);
+  var dosid = /[?&]dosid=([^&]+)/.exec(window.location.href);
   if (dosid == null) dosid = /[?&]sid=([^&]+)/.exec(window.location.href);  
-  if (dosid == null) return;
+  if (dosid == null) return; // No sid is on the url, return.
 
-  let server = /^http[s]?:[/][/]([^.]+)[.]darkorbit[.]com/.exec(window.location.href);
+  var server = /^http[s]?:[/][/]([^.]+)[.]darkorbit[.]com/.exec(window.location.href);
   if (server == null) return;
 
-  chrome.runtime.sendMessage({sid:dosid[1],sv:server[1]}, function(callback) {
-	window.location.href = "https://" + server[1] + ".darkorbit.com/indexInternal.es?action=internalStart";
+  chrome.runtime.sendMessage({sid:dosid[1],sv:server[1],db:true}, function(callback) {
+	  window.location.href = "https://" + server[1] + ".darkorbit.com/indexInternal.es?action=internalStart";
   });
 }
 
