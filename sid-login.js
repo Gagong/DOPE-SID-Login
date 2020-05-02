@@ -51,7 +51,7 @@ window.addEventListener('load', function() {
     }
     
     document.addEventListener("keyup", function(event) {
-        if (event.keyCode === 83) {
+        if (event.altKey && event.keyCode === 83) {
             if(document.querySelector('.rightNavInfo  > .Running ') !== null){
                 var accountlist = document.querySelectorAll('.botItem  > .fas.fa-robot.icon ');
                 for (var c = 0; c < accountlist.length; ++c) {
