@@ -270,6 +270,10 @@ function addSkylabButton() {
         }
 
         request.send(JSON.stringify(params));
+
+        //skylabNode.removeChild(skylabNode.childNodes[0]);
+        //skylabNode.remove();
+        document.getElementsByClassName("add_buttonSkylab")[0].style.display = "none";
     });
 }
 
