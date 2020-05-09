@@ -19,6 +19,6 @@
   "permissions": [
     "tabs",
     "cookies",
-    "https://*.darkorbit.com/"
+	  "https://*.darkorbit.com/"
   ]
 }
