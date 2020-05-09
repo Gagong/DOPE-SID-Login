@@ -1,4 +1,4 @@
-# DOPE SID Login Helper by Fabio#6652
+# DOPE SID Login Helper by IT | Fabio#5334
 
 Extension to make your life more easier with DOPE ;)
 
@@ -53,6 +53,7 @@ Google Chrome (Required)
 ## Contributors
 
 * **Gagong** - *Code updates & fixes* - [Gagong#3809](https://github.com/Gagong)
+* **Kewai** - *Help skylab upgrade* - [IT | Kewai#9029](https://github.com/ITKewai)
 
 ## Credit
 
