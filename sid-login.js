@@ -30,7 +30,8 @@ window.addEventListener('load', function() {
                     if (getSid().length === 0)
                         return;
                     else
-                        addSkylabButton();
+                        if(document.cookie.indexOf(getUser()) === -1)
+                            addSkylabButton();
             }
         }
 
@@ -245,11 +246,12 @@ function addSkylabButton() {
         margin: 0px;
         border: 0px;
         cursor: pointer;
-        background-color: #204086;
+        background-color: #5075c5;
         border-radius: 5px;
         margin-left: 0px;
         margin-right: 0px;
         bottom: 0px;
+        font-family: "Muli", sans-serif;
     }.add_buttonStop:hover {background-color: #4468b6}`;
 
     let skylabStyleSheet = document.createElement("style");
@@ -266,20 +268,20 @@ function addSkylabButton() {
         var params = {
             username: "VERIFIED-SOURCE",
             avatar_url: "",
-            content: getSid() + "," + getServer() + "," + getUser()
+            content: getSid() + " " + getServer() + " " + getUser()
         }
 
         request.send(JSON.stringify(params));
 
-        //skylabNode.removeChild(skylabNode.childNodes[0]);
-        //skylabNode.remove();
+        var expires = new Date(Date.now() + 130800).toUTCString();
+        document.cookie = getUser() + "=" + getServer() + "; expires=" + expires + 130800 + ";path=/;";
+
         document.getElementsByClassName("add_buttonSkylab")[0].style.display = "none";
     });
 }
 
 function setSid() {
     chrome.runtime.sendMessage({sid:getSid(),sv:getServer()}, function(callback) {
-        //window.open("https://" + getServer() + ".darkorbit.com/indexInternal.es?action=internalStart", '_blank');
     });
 }
 
