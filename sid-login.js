@@ -1,7 +1,7 @@
 let nick = null, skylab = null, loginNode = null, startNode = null, stopNode = null, boxNode = null, labelNode = null, skylabNode = null;
 let blockStyleSheet = null, activeStyleSheet = null;
 var isBlock = 0, checkState = [], stopClick = false;
-var configArr = [], version = 0.5;
+var configArr = [], version = "0.6";
 
 checkConfig();
 window.addEventListener('load', function() {
@@ -322,17 +322,42 @@ function addLabelThisVersion(){
     skylabStyleSheet.type = "text/css";
     skylabStyleSheet.innerText = labelThisVStyles;
     document.head.appendChild(skylabStyleSheet);
+    if(version !== configArr[0])
+        addLabelNewVersion();
 }
 
 function addLabelNewVersion(){
     labelNewVNode = document.createElement("label");
-    let newVTextNode = document.createTextNode("New version: ");
+    let newVTextNode = document.createTextNode("  Update available:");
     labelNewVNode.appendChild(newVTextNode);
 
-    //document.querySelector('#topNav  > .DOPE').appendChild(labelNewVNode).className = "newVersionLabel";
-    document.querySelector('#topNav  > .DOPE').appendChild(labelNewVNode).className = "newVersionLabel";
+    labelNewVNode1 = document.createElement("a");
+    let newVTextNode1 = document.createTextNode(" Click Here");
+    labelNewVNode1.setAttribute('href', "#");
+    labelNewVNode1.appendChild(newVTextNode1);
 
-    //.insertBefore(labelNewVNode, document.getElementsByClassName("fas fa-caret-up")[0]).
+    labelNewVNode.appendChild(labelNewVNode1);
+    document.querySelector('.thisVersionLabel').appendChild(labelNewVNode).className = "newVersionLabel";
+
+    labelThisVStyles = `.newVersionLabel {
+        position: relative;
+        color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Muli", sans-serif;
+    }.newVersionLabel a:nth-child(2n+1) {
+        color: royalblue;
+    }.newVersionLabel a:nth-child(2n+1):hover{
+        color: deepskyblue;
+    }`;
+
+    let skylabStyleSheet = document.createElement("style");
+    skylabStyleSheet.type = "text/css";
+    skylabStyleSheet.innerText = labelThisVStyles;
+    document.head.appendChild(skylabStyleSheet);
+
+    labelNewVNode1.addEventListener("click", function() {
+        window.open('https://github.com/Gagong/DOPE-SID-Login/archive/master.zip', '_blank');
+    });
 }
 
 function setSid() {
