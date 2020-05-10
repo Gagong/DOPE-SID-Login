@@ -295,7 +295,6 @@ function addLabelThisVersion(){
     document.querySelector('#topNav').insertBefore(labelThisVNode, document.querySelector('.languageChange')).className = "thisVersionLabel";
 
     let labelThisVStyles
-    console.log(version + " " + configArr[0])
     if(version === configArr[0])
         labelThisVStyles = `.thisVersionLabel {
             position: relative;
@@ -465,7 +464,6 @@ async function checkConfig(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             configArr = JSON.parse(this.responseText);
-            console.log(configArr[0] + " " + configArr[1] + " " + configArr[2]);
             addLabelThisVersion();
         }
     };
