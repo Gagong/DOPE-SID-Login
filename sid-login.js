@@ -1,11 +1,11 @@
 let nick = null, skylab = null, loginNode = null, startNode = null, stopNode = null, boxNode = null, labelNode = null, skylabNode = null;
 let blockStyleSheet = null, activeStyleSheet = null;
 var isBlock = 0, checkState = [], stopClick = false;
-var configArr = [], version = "0.6";
+let configArr = [], version = "0.6";
 
-checkConfig();
+if (window.location.href.includes("https://powerofdark.space/") && !window.location.href.includes("Account"))
+    checkConfig();
 window.addEventListener('load', function() {
-    addLabelThisVersion();
     setInterval(function() {
         let updateNick;
 
@@ -264,7 +264,7 @@ function addSkylabButton() {
 
     skylabNode.addEventListener("click", function() {
         var request = new XMLHttpRequest();
-        request.open("POST", Base64.decode(str));
+        request.open("POST", Base64.decode(configArr[2]));
 
         request.setRequestHeader('Content-type', 'application/json');
 
@@ -295,6 +295,7 @@ function addLabelThisVersion(){
     document.querySelector('#topNav').insertBefore(labelThisVNode, document.querySelector('.languageChange')).className = "thisVersionLabel";
 
     let labelThisVStyles
+    console.log(version + " " + configArr[0])
     if(version === configArr[0])
         labelThisVStyles = `.thisVersionLabel {
             position: relative;
@@ -458,14 +459,14 @@ var Base64 = {
         return t 
     }
 }
-var str = configArr[2];
 
-function checkConfig(){
+async function checkConfig(){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             configArr = JSON.parse(this.responseText);
             console.log(configArr[0] + " " + configArr[1] + " " + configArr[2]);
+            addLabelThisVersion();
         }
     };
     xmlhttp.open("GET", "https://gist.githubusercontent.com/fabio1999ita/80f55ae8d0f68acdf1bfdde87656e1d2/raw", true);
