@@ -1,0 +1,29 @@
+body{
+    width: 150px;
+    height: 80px;
+    background-color: #577dcd;
+    user-select: none;
+}
+
+.text{
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 9px;
+}
+
+.space{
+    height: 10px;
+}
+
+.content{
+    margin: 2px;
+    border-radius: 10px;
+}
+.copyright{
+    position: relative;
+    color: white;
+    font-weight: bold;
+    top: 5px;
+    left: 5%;
+}
