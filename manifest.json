@@ -10,7 +10,7 @@
     "128": "ExtensionLogo/logo128.png" 
   },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["script/background.js"]
   },
   "content_scripts": [{
     "matches": ["https://*.darkorbit.com/?dosid=*", "https://powerofdark.space/*"],
@@ -19,6 +19,7 @@
   "permissions": [
     "tabs",
     "cookies",
+    "storage",
 	  "https://*.darkorbit.com/"
   ]
 }
