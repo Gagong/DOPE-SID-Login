@@ -2,6 +2,7 @@ body{
     width: 150px;
     height: 80px;
     background-color: #577dcd;
+    user-select: none;
 }
 
 .text{
