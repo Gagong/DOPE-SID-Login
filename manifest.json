@@ -4,6 +4,7 @@
   "version": "0.6",
   "description": "SID Login from DOPE Bot Panel",
   "author": "fabio",
+  "incognito": "split",
   "icons": {
     "16": "ExtensionLogo/logo16.png",
     "48": "ExtensionLogo/logo48.png",
