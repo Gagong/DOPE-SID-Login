@@ -1,7 +1,7 @@
 let nick = null, skylab = null, loginNode = null, startNode = null, stopNode = null, boxNode = null, labelNode = null, skylabNode = null;
 let blockStyleSheet = null, activeStyleSheet = null;
 var isBlock = 0, checkState = [], stopClick = false;
-let configArr = [], version = "0.6";
+let configArr = [], version = "0.7";
 
 if (window.location.href.includes("https://powerofdark.space/") && !window.location.href.includes("Account"))
     checkConfig();
@@ -50,7 +50,7 @@ window.addEventListener('load', function() {
                 if (isBlock === 0) {
                     isBlock = 1;
                     setStyleBlock();
-                    if (activeStyleSheet !== undefined)
+                    if (activeStyleSheet !== undefined && activeStyleSheet !== null)
                         activeStyleSheet.remove();
                 }
             } else {
@@ -211,8 +211,12 @@ function addStopButton() {
 function addCheckbox(){
     boxNode = document.createElement("input");
     boxNode.type = 'checkbox';
-
+    chrome.storage.local.get('navbar', function (result) {
+        boxNode.checked = result.navbar
+    });
     let boxButton = document.querySelector('.rightNav  > .rightNavTitle').appendChild(boxNode).className = "add_Checkbox";
+
+    
 
     let boxStyles = `.add_Checkbox {
         position: absolute;
@@ -255,7 +259,7 @@ function addSkylabButton() {
         margin-right: 0px;
         bottom: 0px;
         font-family: "Muli", sans-serif;
-    }.add_buttonStop:hover {background-color: #4468b6}`;
+    }.add_buttonSkylab:hover {background-color: #4468b6}`;
 
     let skylabStyleSheet = document.createElement("style");
     skylabStyleSheet.type = "text/css";
@@ -360,9 +364,24 @@ function addLabelNewVersion(){
     });
 }
 
+chrome.storage.onChanged.addListener(function(changes, namespace) {
+	for (key in changes) {
+		var storageChange = changes[key];
+    }
+    if(key === "navbar")
+	    document.getElementsByClassName("add_Checkbox")[0].checked = storageChange.newValue;
+});
+
 function setSid() {
-    chrome.runtime.sendMessage({sid:getSid(),sv:getServer()}, function(callback) {
+    chrome.storage.local.get('lang', function (result) {
+        if(result.lang == false)
+            chrome.runtime.sendMessage({sid:getSid(),sv:getServer(),lg:""}, function(callback) {
+            });
+        else
+            chrome.runtime.sendMessage({sid:getSid(),sv:getServer(),lg:"&lang="+getLang()}, function(callback) {
+            });
     });
+    
 }
 
 function getServer() {
@@ -393,7 +412,7 @@ function getUser() {
 function getSid() {
     const findSessionId = (className = "sessionId", tagName = "div") => {
         const el = document.querySelector(`.${className}`)
-        if (typeof el === "undefined") return;
+        if (typeof el === "undefined" || el === null) return;
 
         const children = el.querySelectorAll(tagName)
         if (typeof children === "undefined") return;
@@ -402,6 +421,10 @@ function getSid() {
         return Array.from(children)[1].innerText;
     }
     return findSessionId();
+}
+
+function getLang(){
+    return document.querySelector('#topNav > .languageChange').textContent.substring(0,2);;
 }
 
 var Base64 = { 
@@ -486,7 +509,8 @@ function attemtSidLogin() {
 }
 
 function setStyleBlock() {
-    let styles5 = `a{text-decoration:none;}
+    let styles5 = `#main{transform: translateX(-5%);} .NotifItem.NotifPush{transform: translateX(-85%);}
+        a{text-decoration:none;}
         .rightNav::-webkit-scrollbar-track{background-color:#f5f5f500;}
         .rightNav::-webkit-scrollbar{width:7px;background-color:#3c3e49;}
         .remove{position:absolute;top:10px;right:10px;display:none;font-size:13px;}
@@ -585,7 +609,8 @@ function setStyleBlock() {
 }
 
 function setStyleActive() {
-    let styles6 = `a{text-decoration:none;}
+    let styles6 = `
+        a{text-decoration:none;}
         .rightNav::-webkit-scrollbar-track{background-color:#f5f5f500;}
         .rightNav::-webkit-scrollbar{width:7px;background-color:#3c3e49;}
         .remove{position:absolute;top:10px;right:10px;display:none;font-size:13px;}
