@@ -18,7 +18,7 @@
   },
   "content_scripts": [{
     "matches": ["https://*.darkorbit.com/?dosid=*", "https://powerofdark.space/*"],
-    "js":["sid-login.js", "script/popup.js"]
+    "js":["sid-login.js"]
   }],
   "permissions": [
     "tabs",
