@@ -205,7 +205,7 @@ class Add {
                                 repeat();
                             }
                         }
-                    }, 1500 * i);
+                    }, 3000 * i);
                 }
             function repeat(){
                 for (let i = 0; i < resource.length; i++) {
@@ -217,7 +217,7 @@ class Add {
                                 repeat();
                             }
                         }
-                    }, 1500 * i);
+                    }, 3000 * i);
                 }
             }
             console.log(queue.length);
