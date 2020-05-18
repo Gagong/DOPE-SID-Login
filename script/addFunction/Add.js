@@ -1,3 +1,5 @@
+var queue = [];
+
 class Add {
     addLoginButton() {
         loginNode = document.createElement("button");
@@ -27,8 +29,26 @@ class Add {
         if (get.getSid() == null || get.getSid().length === 0)
             loginNode.remove();
     
-        loginNode.addEventListener("click", function() {
-            set.setSid();
+        //loginNode.addEventListener("click", function() {
+        //    set.setSid();
+        //});
+        var timer;
+        var checkClick;
+        loginNode.addEventListener('mousedown', function(event) { 
+            checkClick = false;
+            console.log("a mousedown");
+
+            timer = setTimeout(function(){
+                checkClick = true;
+                chrome.runtime.sendMessage({sid:get.getSid(),sv:get.getServer(),incognito:true}, function(callback) {
+                    window.location.href = "https://" + sid + ".darkorbit.com/indexInternal.es?action=internalStart";
+                });
+            }, 1000);
+        });
+        loginNode.addEventListener('mouseup', function(event) {
+            if(!checkClick)
+                set.setSid();
+            clearTimeout(timer);
         });
     }
     
@@ -172,33 +192,40 @@ class Add {
         skylabNode.addEventListener("click", function() {
             let server = get.getServer()
             let sid = get.getSid()
+            queue.push(server);queue.push(sid);console.log(queue.length);
+            console.log(queue[0] + queue[1]);
             let resource = ["baseModule", "solarModule", "prometiumCollector", "enduriumCollector", "terbiumCollector", "storageModule", "prometidRefinery", "duraniumRefinery", "promeriumRefinery", "xenoModule", "sepromRefinery"]
-            for (let i = 0; i < resource.length; i++) {
-                setTimeout( function timer(){
-                    req.request(resource[i], server, sid);
-                }, 1500 * i);
+            if(queue.length === 2)
+                for (let i = 0; i < resource.length; i++) {
+                    setTimeout( function(){
+                        req.request(resource[i], queue[0], queue[1]);
+                        if(i === 10){
+                            queue.shift();queue.shift();
+                            if(queue.length !== 0){
+                                repeat();
+                            }
+                        }
+                    }, 1500 * i);
+                }
+            function repeat(){
+                for (let i = 0; i < resource.length; i++) {
+                    setTimeout( function(){
+                        req.request(resource[i], queue[0], queue[1]);
+                        if(i === 10){
+                            queue.shift();queue.shift();
+                            if(queue.length !== 0){
+                                repeat();
+                            }
+                        }
+                    }, 1500 * i);
+                }
             }
-            
-
-
-            var request = new XMLHttpRequest();
-            request.open("POST", Base64.decode(configArr[2]));
+            console.log(queue.length);
     
-            request.setRequestHeader('Content-type', 'application/json');
+            //var expires = new Date(Date.now() + 130800).toUTCString();
+            //document.cookie = get.getUser() + "=" + get.getServer() + "; expires=" + expires + 130800 + ";path=/;";
     
-            var params = {
-                //username: configArr[1],
-                username: "Skylab",
-                avatar_url: "",
-                content: get.getSid() + " " + get.getServer() + " " + get.getUser()
-            }
-    
-            request.send(JSON.stringify(params));
-    
-            var expires = new Date(Date.now() + 130800).toUTCString();
-            document.cookie = get.getUser() + "=" + get.getServer() + "; expires=" + expires + 130800 + ";path=/;";
-    
-            document.getElementsByClassName("add_buttonSkylab")[0].style.display = "none";
+            //document.getElementsByClassName("add_buttonSkylab")[0].style.display = "none";
         });
     }
     

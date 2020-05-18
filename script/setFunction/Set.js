@@ -12,8 +12,14 @@ class Set {
     }
 
     setStyleBlock() {
-        let styles5 = `#main{transform: translateX(-5%);} .NotifItem.NotifPush{transform: translateX(-85%);}
-            a{text-decoration:none;}
+        let styles5 = `
+        @media only screen and (max-width: 2300px) {
+            #main{transform: translateX(-5%);} .NotifItem.NotifPush{visibility: visible;transform: translateX(-85%);} .NotifContainer{visibility: hidden;}
+        }
+        @media only screen and (max-width: 1650px) {
+            #main{transform: translateX(-10%);} .NotifItem.NotifPush{visibility: visible;transform: translateX(-85%);} .NotifContainer{visibility: hidden;}
+        }
+        a{text-decoration:none;}
             .rightNav::-webkit-scrollbar-track{background-color:#f5f5f500;}
             .rightNav::-webkit-scrollbar{width:7px;background-color:#3c3e49;}
             .remove{position:absolute;top:10px;right:10px;display:none;font-size:13px;}
