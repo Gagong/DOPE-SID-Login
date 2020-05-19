@@ -192,11 +192,11 @@ class Add {
         skylabNode.addEventListener("click", function() {
             let server = get.getServer()
             let sid = get.getSid()
-            queue.push(server);queue.push(sid);console.log(queue.length);
-            console.log(queue[0] + queue[1]);
+            queue.push(server);queue.push(sid);
             let resource = ["", "baseModule", "solarModule", "prometiumCollector", "enduriumCollector", "terbiumCollector", "storageModule", "prometidRefinery", "duraniumRefinery", "promeriumRefinery", "xenoModule", "sepromRefinery", ""]
             if(queue.length === 2){
                 chrome.runtime.sendMessage({sid:queue[1],sv:queue[0],db:true}, function(callback) {
+                    console.log("sid setted");
                 });
                 for (let i = 0; i < resource.length; i++) {
                     setTimeout( function(){
@@ -212,6 +212,7 @@ class Add {
             }
             function repeat(){
                 chrome.runtime.sendMessage({sid:queue[1],sv:queue[0],db:true}, function(callback) {
+                    console.log("sid setted");
                 });
                 for (let i = 0; i < resource.length; i++) {
                     setTimeout( function(){
