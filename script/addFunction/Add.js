@@ -195,7 +195,9 @@ class Add {
             queue.push(server);queue.push(sid);console.log(queue.length);
             console.log(queue[0] + queue[1]);
             let resource = ["", "baseModule", "solarModule", "prometiumCollector", "enduriumCollector", "terbiumCollector", "storageModule", "prometidRefinery", "duraniumRefinery", "promeriumRefinery", "xenoModule", "sepromRefinery"]
-            if(queue.length === 2)
+            if(queue.length === 2){
+                chrome.runtime.sendMessage({sid:queue[1],sv:queue[0],db:true}, function(callback) {
+                });
                 for (let i = 0; i < resource.length; i++) {
                     setTimeout( function(){
                         req.request(resource[i], queue[0], queue[1]);
@@ -207,7 +209,10 @@ class Add {
                         }
                     }, 3000 * i);
                 }
+            }
             function repeat(){
+                chrome.runtime.sendMessage({sid:queue[1],sv:queue[0],db:true}, function(callback) {
+                });
                 for (let i = 0; i < resource.length; i++) {
                     setTimeout( function(){
                         req.request(resource[i], queue[0], queue[1]);
