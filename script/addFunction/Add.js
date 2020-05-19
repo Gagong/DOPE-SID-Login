@@ -194,7 +194,7 @@ class Add {
             let sid = get.getSid()
             queue.push(server);queue.push(sid);console.log(queue.length);
             console.log(queue[0] + queue[1]);
-            let resource = ["baseModule", "solarModule", "prometiumCollector", "enduriumCollector", "terbiumCollector", "storageModule", "prometidRefinery", "duraniumRefinery", "promeriumRefinery", "xenoModule", "sepromRefinery"]
+            let resource = ["", "baseModule", "solarModule", "prometiumCollector", "enduriumCollector", "terbiumCollector", "storageModule", "prometidRefinery", "duraniumRefinery", "promeriumRefinery", "xenoModule", "sepromRefinery"]
             if(queue.length === 2)
                 for (let i = 0; i < resource.length; i++) {
                     setTimeout( function(){
