@@ -194,20 +194,20 @@ class Add {
             let sid = get.getSid()
             queue.push(server);queue.push(sid);console.log(queue.length);
             console.log(queue[0] + queue[1]);
-            let resource = ["", "baseModule", "solarModule", "prometiumCollector", "enduriumCollector", "terbiumCollector", "storageModule", "prometidRefinery", "duraniumRefinery", "promeriumRefinery", "xenoModule", "sepromRefinery"]
+            let resource = ["", "baseModule", "solarModule", "prometiumCollector", "enduriumCollector", "terbiumCollector", "storageModule", "prometidRefinery", "duraniumRefinery", "promeriumRefinery", "xenoModule", "sepromRefinery", ""]
             if(queue.length === 2){
                 chrome.runtime.sendMessage({sid:queue[1],sv:queue[0],db:true}, function(callback) {
                 });
                 for (let i = 0; i < resource.length; i++) {
                     setTimeout( function(){
                         req.request(resource[i], queue[0], queue[1]);
-                        if(i === 10){
+                        if(i === 12){
                             queue.shift();queue.shift();
                             if(queue.length !== 0){
                                 repeat();
                             }
                         }
-                    }, 3000 * i);
+                    }, 2000 * i);
                 }
             }
             function repeat(){
@@ -216,13 +216,13 @@ class Add {
                 for (let i = 0; i < resource.length; i++) {
                     setTimeout( function(){
                         req.request(resource[i], queue[0], queue[1]);
-                        if(i === 10){
+                        if(i === 12){
                             queue.shift();queue.shift();
                             if(queue.length !== 0){
                                 repeat();
                             }
                         }
-                    }, 3000 * i);
+                    }, 2000 * i);
                 }
             }
             console.log(queue.length);
