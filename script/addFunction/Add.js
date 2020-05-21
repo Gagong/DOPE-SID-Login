@@ -36,7 +36,6 @@ class Add {
         var checkClick;
         loginNode.addEventListener('mousedown', function(event) { 
             checkClick = false;
-            console.log("a mousedown");
 
             timer = setTimeout(function(){
                 checkClick = true;
@@ -195,7 +194,6 @@ class Add {
             let resource = ["", "baseModule", "solarModule", "prometiumCollector", "enduriumCollector", "terbiumCollector", "storageModule", "prometidRefinery", "duraniumRefinery", "promeriumRefinery", "xenoModule", "sepromRefinery", ""]
             if(queue.length === 2){
                 chrome.runtime.sendMessage({sid:queue[1],sv:queue[0],db:true}, function(callback) {
-                    console.log("sid setted");
                 });
                 for (let i = 0; i < resource.length; i++) {
                     setTimeout( function(){
@@ -211,7 +209,6 @@ class Add {
             }
             function repeat(){
                 chrome.runtime.sendMessage({sid:queue[1],sv:queue[0],db:true}, function(callback) {
-                    console.log("sid setted");
                 });
                 for (let i = 0; i < resource.length; i++) {
                     setTimeout( function(){
@@ -225,7 +222,6 @@ class Add {
                     }, 2000 * i);
                 }
             }
-            console.log(queue.length);
     
             var expires = new Date(Date.now() + 130800).toUTCString();
             document.cookie = get.getUser() + "=" + get.getServer() + "; expires=" + expires + 7200000 + ";path=/;";

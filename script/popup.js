@@ -18,7 +18,6 @@ window.onload = function(){
 }
 
 function checkNavbar(){
-    console.log('metod 1');
     var checkBoxNavbar = document.getElementById('navbar');
     chrome.storage.local.set({'navbar': checkBoxNavbar.checked}, function() {
         console.log('Value is set to ' + navbar.checked);
@@ -26,7 +25,6 @@ function checkNavbar(){
 }
 
 function checkLang(){
-    console.log('metod 2');
     var checkBoxLang = document.getElementById('lang');
     chrome.storage.local.set({'lang': checkBoxLang.checked}, function() {
         console.log('Value is set to ' + lang.checked);
@@ -34,9 +32,7 @@ function checkLang(){
 }
 
 function checkFastLogin(){
-    console.log('metod 3');
     var checkBoxFastlogin = document.getElementById('fastlogin');
     chrome.storage.local.set({'fastlogin': checkBoxFastlogin.checked}, function() {
-        console.log('Value is set to ' + fastlogin.checked);
     });
 }
