@@ -1,11 +1,16 @@
 class Set {
     setSid() {
+        let url = ".darkorbit.com/indexInternal.es?action=internalStart";
+        chrome.storage.local.get('fastlogin', function (result) {
+            if(result.fastlogin == true)
+                url = ".darkorbit.com/indexInternal.es?action=internalPayment";
+        });
         chrome.storage.local.get('lang', function (result) {
             if(result.lang == false)
-                chrome.runtime.sendMessage({sid:get.getSid(),sv:get.getServer(),lg:""}, function(callback) {
+                chrome.runtime.sendMessage({sid:get.getSid(),sv:get.getServer(),url,lg:""}, function(callback) {
                 });
             else
-                chrome.runtime.sendMessage({sid:get.getSid(),sv:get.getServer(),lg:"&lang="+get.getLang()}, function(callback) {
+                chrome.runtime.sendMessage({sid:get.getSid(),sv:get.getServer(),url,lg:"&lang="+get.getLang()}, function(callback) {
                 });
         });
         
