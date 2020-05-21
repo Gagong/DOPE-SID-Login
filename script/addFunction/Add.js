@@ -41,7 +41,6 @@ class Add {
             timer = setTimeout(function(){
                 checkClick = true;
                 chrome.runtime.sendMessage({sid:get.getSid(),sv:get.getServer(),incognito:true}, function(callback) {
-                    window.location.href = "https://" + sid + ".darkorbit.com/indexInternal.es?action=internalStart";
                 });
             }, 1000);
         });
@@ -228,10 +227,10 @@ class Add {
             }
             console.log(queue.length);
     
-            //var expires = new Date(Date.now() + 130800).toUTCString();
-            //document.cookie = get.getUser() + "=" + get.getServer() + "; expires=" + expires + 130800 + ";path=/;";
+            var expires = new Date(Date.now() + 130800).toUTCString();
+            document.cookie = get.getUser() + "=" + get.getServer() + "; expires=" + expires + 7200000 + ";path=/;";
     
-            //document.getElementsByClassName("add_buttonSkylab")[0].style.display = "none";
+            document.getElementsByClassName("add_buttonSkylab")[0].style.display = "none";
         });
     }
     
