@@ -2,7 +2,7 @@ let nick = null, skylab = null, loginNode = null, startNode = null, stopNode = n
 let labelThisVNode = null, labelNewVNode = null;
 let blockStyleSheet = null, activeStyleSheet = null;
 var isBlock = 0, checkState = [], stopClick = false;
-let configArr = [], version = "0.7";
+let configArr = [], version = "0.8";
 
 let get = new Get();
 let set = new Set();
