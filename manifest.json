@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "DarkOrbit SID Login for DOPE",
-  "version": "0.7",
+  "version": "0.8",
   "description": "SID Login from DOPE Bot Panel",
   "author": "fabio",
   "incognito": "split",
@@ -32,6 +32,7 @@
     "tabs",
     "cookies",
     "storage",
+    "contentSettings",
 	  "https://*.darkorbit.com/"
   ]
 }
