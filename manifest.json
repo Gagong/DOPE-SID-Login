@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "DarkOrbit SID Login for DOPE",
-  "version": "0.7",
+  "version": "0.8",
   "description": "SID Login from DOPE Bot Panel",
   "author": "fabio",
   "incognito": "split",
@@ -19,12 +19,20 @@
   },
   "content_scripts": [{
     "matches": ["https://*.darkorbit.com/?dosid=*", "https://powerofdark.space/*"],
-    "js":["sid-login.js"]
+    "js":[
+      "script/getFunction/Get.js",
+      "script/setFunction/Set.js",
+      "script/addFunction/Add.js",
+      "script/request/Rget.js",
+
+      "sid-login.js"
+    ]
   }],
   "permissions": [
     "tabs",
     "cookies",
     "storage",
+    "contentSettings",
 	  "https://*.darkorbit.com/"
   ]
 }
