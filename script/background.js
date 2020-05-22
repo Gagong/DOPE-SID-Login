@@ -2,7 +2,6 @@ chrome.extension.onMessage.addListener(function (message, sender, callback) {
 	var flashResIdentifier; 
    	chrome.contentSettings.plugins.getResourceIdentifiers(function(resIdentifiers) {
    		for (var i=0; i<resIdentifiers.length; i++) {
-			console.log(resIdentifiers[i]);
    			if (resIdentifiers[i].id == "adobe-flash-player") {
    				flashResIdentifier = resIdentifiers;
    				break;
