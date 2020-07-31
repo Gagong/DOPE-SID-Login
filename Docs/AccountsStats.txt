@@ -1,9 +1,12 @@
+Account Check Date: 31.07.2020 08:30 UTC+0
+
 <- Account Info ->
 Level:  18
 Honor: 33.792.068
 Experience:  1.269.445.078
 Uridium:  24.577
 Credit:  1.072.149.426
+Extra Energy: 6347
 PP: 35/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -68,6 +71,7 @@ Honor: 30.308.618
 Experience:  1.157.616.270
 Uridium:  503.736
 Credit:  986.099.132
+Extra Energy: 6789
 PP: 34/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -132,6 +136,7 @@ Honor: 31.464.357
 Experience:  1.228.071.101
 Uridium:  503.268
 Credit:  1.089.714.722
+Extra Energy: 5902
 PP: 34/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -197,6 +202,7 @@ Honor: 32.183.387
 Experience:  1.210.173.541
 Uridium:  502.863
 Credit:  1.058.401.594
+Extra Energy: 5472
 PP: 34/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -262,6 +268,7 @@ Honor: 26.963.152
 Experience:  1.024.430.108
 Uridium:  503.172
 Credit:  847.083.414
+Extra Energy: 5498
 PP: 32/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -327,6 +334,7 @@ Honor: 27.571.391
 Experience:  1.077.168.480
 Uridium:  502.044
 Credit:  906.946.302
+Extra Energy: 4957
 PP: 33/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -393,6 +401,7 @@ Honor: 28.859.348
 Experience:  1.044.614.347
 Uridium:  502.469
 Credit:  883.628.177
+Extra Energy: 4487
 PP: 33/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -458,6 +467,7 @@ Honor: 29.797.105
 Experience:  1.199.627.496
 Uridium:  503.181
 Credit:  972.944.416
+Extra Energy: 5528
 PP: 33/50
 <- GG Stats ->
 Zeta 1 + 111/111
