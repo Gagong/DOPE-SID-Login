@@ -27,6 +27,7 @@ Experience:  1.269.445.078
 Uridium:  24.577
 Credit:  1.072.149.426
 Extra Energy: 6347
+Booty: 1250
 PP: 35/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -92,6 +93,7 @@ Experience:  1.157.616.270
 Uridium:  503.736
 Credit:  986.099.132
 Extra Energy: 6789
+Booty: 1195
 PP: 34/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -157,6 +159,7 @@ Experience:  1.228.071.101
 Uridium:  503.268
 Credit:  1.089.714.722
 Extra Energy: 5902
+Booty: 1913
 PP: 34/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -223,6 +226,7 @@ Experience:  1.210.173.541
 Uridium:  502.863
 Credit:  1.058.401.594
 Extra Energy: 5472
+Booty: 1269
 PP: 34/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -289,6 +293,7 @@ Experience:  1.024.430.108
 Uridium:  503.172
 Credit:  847.083.414
 Extra Energy: 5498
+Booty: 1142
 PP: 32/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -355,6 +360,7 @@ Experience:  1.077.168.480
 Uridium:  502.044
 Credit:  906.946.302
 Extra Energy: 4957
+Booty: 1023
 PP: 33/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -422,6 +428,7 @@ Experience:  1.044.614.347
 Uridium:  502.469
 Credit:  883.628.177
 Extra Energy: 4487
+Booty: 1050
 PP: 33/50
 <- GG Stats ->
 Zeta 1 + 111/111
@@ -488,6 +495,7 @@ Experience:  1.199.627.496
 Uridium:  503.181
 Credit:  972.944.416
 Extra Energy: 5528
+Booty: 1197
 PP: 33/50
 <- GG Stats ->
 Zeta 1 + 111/111
