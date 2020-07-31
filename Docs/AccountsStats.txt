@@ -1,5 +1,25 @@
 Account Check Date: 31.07.2020 08:30 UTC+0
 
+Every account have:
+<-- Formations -->
+Wheel
+Drill
+Moth
+X
+<-- PET AI -->
+PET Resourse Collector[3]
+<-- OTHER -->
+2 hangars complects (CPUs and stuff) <- Different hangars used for Palladium and GG 
+<-- ZEUT parths -->
+30/45	
+25/45	
+1	
+23/45	
+28/45	
+27/45	
+20/45	
+32/45
+
 <- Account Info ->
 Level:  18
 Honor: 33.792.068
