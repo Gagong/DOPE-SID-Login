@@ -1,0 +1,517 @@
+<- Account Info ->
+Level:  18
+Honor: 33.792.068
+Experience:  1.269.445.078
+Uridium:  24.577
+Credit:  1.072.149.426
+PP: 35/50
+<- GG Stats ->
+Zeta 1 + 111/111
+Kronos 1/21
+<- DRONES ->
+IIIIIIIIA
+<- Uav Design ->
+Havoc: 66
+Hercules: 0
+Spartan: 0
+<- Weapons ->
+Prometheus_Laser: 1
+LF_4: 40
+<- Generators ->
+SG3N_B02: 29
+SG3N_B03: 0
+<- Ammo ->
+MCB_25: 7668789
+MCB_50: 2839188
+SAB_50: 2073719
+UCB_100: 2082142
+RSB_75: 24225
+RCB_140: 0
+RB_214: 0
+JOB_100: 0
+PIB_100: 6668
+CB0_100: 0
+RCB_140: 0
+A_BL: 0
+<- Rockets ->
+PLT_2021: 119400
+PLT_2026: 101
+PLT_3030: 0
+PLD_8: 0
+R_IC3: 0
+EMP_01: 117
+XENOMIT: 208684
+ACM_1: 14378
+ISH-01: 143.78
+<- Ship & Design ->
+diminisher
+g-veteran
+goliath
+sentinel
+sentinel_design_sentinel-expo2016
+solace
+spectrum
+v-adept
+v-avenger
+v-lightning
+v-revenge
+venom
+
+<- Ship Modules ->
+DMG-VEN01
+DMG-MS01
+
+    
+<- Account Info ->
+Level:  18
+Honor: 30.308.618
+Experience:  1.157.616.270
+Uridium:  503.736
+Credit:  986.099.132
+PP: 34/50
+<- GG Stats ->
+Zeta 1 + 111/111
+Kronos 1/21
+<- DRONES ->
+IIIIIIIIA
+<- Uav Design ->
+Havoc: 56
+Hercules: 0
+Spartan: 0
+<- Weapons ->
+Prometheus_Laser: 1
+LF_4: 38
+<- Generators ->
+SG3N_B02: 35
+SG3N_B03: 0
+<- Ammo ->
+MCB_25: 7195673
+MCB_50: 2589590
+SAB_50: 1992794
+UCB_100: 1999638
+RSB_75: 27374
+RCB_140: 0
+RB_214: 0
+JOB_100: 0
+PIB_100: 5030
+CB0_100: 0
+RCB_140: 0
+A_BL: 0
+<- Rockets ->
+PLT_2021: 109689
+PLT_2026: 187
+PLT_3030: 0
+PLD_8: 0
+R_IC3: 0
+EMP_01: 87
+XENOMIT: 192019
+ACM_1: 13039
+ISH-01: 130.39
+<- Ship & Design ->
+cyborg
+diminisher
+g-veteran
+goliath
+solace
+solace_design_solace-carbonite
+v-adept
+v-avenger
+v-lightning
+v-revenge
+venom
+
+<- Ship Modules ->
+DMG-VEN01
+DMG-MS01
+
+
+
+<- Account Info ->
+Level:  18
+Honor: 31.464.357
+Experience:  1.228.071.101
+Uridium:  503.268
+Credit:  1.089.714.722
+PP: 34/50
+<- GG Stats ->
+Zeta 1 + 111/111
+Kronos 1/21
+<- DRONES ->
+IIIIIIIIAZ
+<- Uav Design ->
+Havoc: 64
+Hercules: 0
+Spartan: 0
+<- Weapons ->
+Prometheus_Laser: 1
+LF_4: 23
+<- Generators ->
+SG3N_B02: 29
+SG3N_B03: 0
+<- Ammo ->
+MCB_25: 7216874
+MCB_50: 2527534
+SAB_50: 1959942
+UCB_100: 1969133
+RSB_75: 23795
+RCB_140: 0
+RB_214: 0
+JOB_100: 0
+PIB_100: 5041
+CB0_100: 0
+RCB_140: 0
+A_BL: 0
+<- Rockets ->
+PLT_2021: 107995
+PLT_2026: 128
+PLT_3030: 0
+PLD_8: 0
+R_IC3: 0
+EMP_01: 86
+XENOMIT: 187827
+ACM_1: 12779
+ISH-01: 127.79
+<- Ship & Design ->
+cyborg
+diminisher
+diminisher_design_diminisher-carbonite
+diminisher_design_diminisher-expo2016
+g-veteran
+goliath
+sentinel
+solace
+v-adept
+v-avenger
+v-lightning
+v-revenge
+venom
+
+<- Ship Modules ->
+DMG-VEN01
+DMG-MS01
+
+    
+<- Account Info ->
+Level:  18
+Honor: 32.183.387
+Experience:  1.210.173.541
+Uridium:  502.863
+Credit:  1.058.401.594
+PP: 34/50
+<- GG Stats ->
+Zeta 1 + 111/111
+Kronos 1/21
+<- DRONES ->
+IIIIIIIIA
+<- Uav Design ->
+Havoc: 58
+Hercules: 0
+Spartan: 0
+<- Weapons ->
+Prometheus_Laser: 1
+LF_4: 39
+<- Generators ->
+SG3N_B02: 18
+SG3N_B03: 0
+<- Ammo ->
+MCB_25: 7536929
+MCB_50: 2664981
+SAB_50: 2067398
+UCB_100: 2023622
+RSB_75: 28933
+RCB_140: 0
+RB_214: 0
+JOB_100: 0
+PIB_100: 5041
+CB0_100: 0
+RCB_140: 0
+A_BL: 0
+<- Rockets ->
+PLT_2021: 119408
+PLT_2026: 187
+PLT_3030: 0
+PLD_8: 0
+R_IC3: 0
+EMP_01: 93
+XENOMIT: 203932
+ACM_1: 14013
+ISH-01: 140.13
+<- Ship & Design ->
+diminisher
+diminisher_design_diminisher-carbonite
+g-veteran
+goliath
+hammerclaw
+sentinel
+solace
+solace_design_solace-carbonite
+v-adept
+v-avenger
+v-lightning
+v-revenge
+venom
+
+<- Ship Modules ->
+DMG-VEN01
+DMG-MS01
+
+    
+<- Account Info ->
+Level:  18
+Honor: 26.963.152
+Experience:  1.024.430.108
+Uridium:  503.172
+Credit:  847.083.414
+PP: 32/50
+<- GG Stats ->
+Zeta 1 + 111/111
+Kronos 1/21
+<- DRONES ->
+IIIIIIIIA
+<- Uav Design ->
+Havoc: 50
+Hercules: 0
+Spartan: 0
+<- Weapons ->
+Prometheus_Laser: 1
+LF_4: 27
+<- Generators ->
+SG3N_B02: 23
+SG3N_B03: 0
+<- Ammo ->
+MCB_25: 6566042
+MCB_50: 2215798
+SAB_50: 1744676
+UCB_100: 1701113
+RSB_75: 19694
+RCB_140: 0
+RB_214: 0
+JOB_100: 0
+PIB_100: 5233
+CB0_100: 0
+RCB_140: 0
+A_BL: 0
+<- Rockets ->
+PLT_2021: 98828
+PLT_2026: 139
+PLT_3030: 0
+PLD_8: 0
+R_IC3: 0
+EMP_01: 89
+XENOMIT: 170996
+ACM_1: 12138
+ISH-01: 121.38
+<- Ship & Design ->
+cyborg
+diminisher
+g-veteran
+goliath
+mimesis
+solace
+solace_design_solace-carbonite
+v-adept
+v-avenger
+v-lightning
+v-lightning_design_v-lightning-expo2016
+v-revenge
+venom
+
+<- Ship Modules ->
+DMG-MS01
+DMG-VEN01
+
+    
+<- Account Info ->
+Level:  18
+Honor: 27.571.391
+Experience:  1.077.168.480
+Uridium:  502.044
+Credit:  906.946.302
+PP: 33/50
+<- GG Stats ->
+Zeta 1 + 111/111
+Kronos 1/21
+<- DRONES ->
+IIIIIIIIA
+<- Uav Design ->
+Havoc: 49
+Hercules: 0
+Spartan: 0
+<- Weapons ->
+Prometheus_Laser: 1
+LF_4: 36
+<- Generators ->
+SG3N_B02: 26
+SG3N_B03: 0
+<- Ammo ->
+MCB_25: 6818828
+MCB_50: 2379850
+SAB_50: 1834926
+UCB_100: 1790815
+RSB_75: 28826
+RCB_140: 0
+RB_214: 0
+JOB_100: 0
+PIB_100: 5010
+CB0_100: 0
+RCB_140: 0
+A_BL: 0
+<- Rockets ->
+PLT_2021: 104643
+PLT_2026: 109
+PLT_3030: 0
+PLD_8: 10
+R_IC3: 0
+EMP_01: 100
+XENOMIT: 184611
+ACM_1: 12724
+ISH-01: 127.24
+<- Ship & Design ->
+diminisher
+diminisher_design_diminisher-carbonite
+g-veteran
+goliath
+mimesis
+sentinel
+sentinel_design_sentinel-carbonite
+solace
+v-adept
+v-avenger
+v-lightning
+v-revenge
+venom
+
+<- Ship Modules ->
+DMG-VP01
+DMG-VEN01
+DMG-MS01
+
+    
+<- Account Info ->
+Level:  18
+Honor: 28.859.348
+Experience:  1.044.614.347
+Uridium:  502.469
+Credit:  883.628.177
+PP: 33/50
+<- GG Stats ->
+Zeta 1 + 111/111
+Kronos 1/21
+<- DRONES ->
+IIIIIIIIA
+<- Uav Design ->
+Havoc: 44
+Hercules: 0
+Spartan: 0
+<- Weapons ->
+Prometheus_Laser: 1
+LF_4: 39
+<- Generators ->
+SG3N_B02: 31
+SG3N_B03: 0
+<- Ammo ->
+MCB_25: 6347825
+MCB_50: 2261440
+SAB_50: 1746939
+UCB_100: 1824155
+RSB_75: 39494
+RCB_140: 0
+RB_214: 0
+JOB_100: 0
+PIB_100: 5021
+CB0_100: 0
+RCB_140: 0
+A_BL: 0
+<- Rockets ->
+PLT_2021: 101266
+PLT_2026: 156
+PLT_3030: 0
+PLD_8: 0
+R_IC3: 0
+EMP_01: 74
+XENOMIT: 173181
+ACM_1: 11530
+ISH-01: 115.3
+<- Ship & Design ->
+diminisher
+g-veteran
+goliath
+sentinel
+sentinel_design_sentinel-carbonite
+solace
+solace_design_solace-carbonite
+spectrum
+v-adept
+v-avenger
+v-lightning
+v-revenge
+venom
+
+<- Ship Modules ->
+DMG-VEN01
+DMG-MS01
+
+    
+<- Account Info ->
+Level:  18
+Honor: 29.797.105
+Experience:  1.199.627.496
+Uridium:  503.181
+Credit:  972.944.416
+PP: 33/50
+<- GG Stats ->
+Zeta 1 + 111/111
+Kronos 1/21
+<- DRONES ->
+IIIIIIIIA
+<- Uav Design ->
+Havoc: 54
+Hercules: 0
+Spartan: 0
+<- Weapons ->
+Prometheus_Laser: 1
+LF_4: 38
+<- Generators ->
+SG3N_B02: 26
+SG3N_B03: 0
+<- Ammo ->
+MCB_25: 6766825
+MCB_50: 2399653
+SAB_50: 1810805
+UCB_100: 1840971
+RSB_75: 24285
+RCB_140: 0
+RB_214: 0
+JOB_100: 0
+PIB_100: 22
+CB0_100: 0
+RCB_140: 0
+A_BL: 0
+<- Rockets ->
+PLT_2021: 105454
+PLT_2026: 107
+PLT_3030: 0
+PLD_8: 0
+R_IC3: 0
+EMP_01: 95
+XENOMIT: 178437
+ACM_1: 12218
+ISH-01: 122.18
+<- Ship & Design ->
+diminisher
+diminisher_design_diminisher-carbonite
+diminisher_design_diminisher-expo2016
+g-veteran
+goliath
+hammerclaw
+sentinel
+solace
+v-adept
+v-avenger
+v-lightning
+v-revenge
+venom
+
+<- Ship Modules ->
+DMG-VEN01
+DMG-MS01
